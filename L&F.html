@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #514376;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .tab {
+            padding: 1rem;
+            cursor: pointer;
+            background-color: hsl(242, 24%, 40%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 0 0.5rem;
+        }
+        .tab.active {
+            background-color: #454381;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .form-container {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4f4583;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #444592;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lost and Found Platform</h1>
+    </header>
+    <main>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="personalTab">Personal Belongings</button>
+            <button class="tab" data-tab="electronicsTab">Electronics</button>
+            <button class="tab" data-tab="clothingTab">Clothing and Accessories</button>
+            <button class="tab" data-tab="jewelryTab">Jewelry</button>
+            <button class="tab" data-tab="documentsTab">Documents</button>
+            <button class="tab" data-tab="othersTab">Others</button>
+        </div>
+
+        <!-- Personal Belongings -->
+        <div id="personalTab" class="tab-content active">
+            <div class="form-container">
+                <h2>Report Personal Belongings</h2>
+                <form id="personalForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Electronics -->
+        <div id="electronicsTab" class="tab-content">
+            <div class="form-container">
+                <h2>Report Electronics</h2>
+                <form id="electronicsForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Clothing and Accessories -->
+        <div id="clothingTab" class="tab-content">
+            <div class="form-container">
+                <h2>Report Clothing and Accessories</h2>
+                <form id="clothingForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Jewelry -->
+        <div id="jewelryTab" class="tab-content">
+            <div class="form-container">
+                <h2>Report Jewelry</h2>
+                <form id="jewelryForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Documents -->
+        <div id="documentsTab" class="tab-content">
+            <div class="form-container">
+                <h2>Report Documents</h2>
+                <form id="documentsForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Others -->
+        <div id="othersTab" class="tab-content">
+            <div class="form-container">
+                <h2>Report Other Items</h2>
+                <form id="othersForm">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Describe the item" required></textarea>
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to the clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Item reported successfully!');
+            });
+        });
+    </script>
+</body>
+</html>
