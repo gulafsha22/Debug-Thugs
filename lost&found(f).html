@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Lost and Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://th.bing.com/th/id/R.f700fb73f6a8eb8e216d0c12b80744d1?rik=8ZQf%2fwiyFw4KnQ&riu=http%3a%2f%2fwww.mtsac.edu%2fstudentlife%2flost-and-found-full.jpg&ehk=wXeZ%2b053yKcgzv8dlajFDENuiE0IVSBQRAd1eEg4Y2k%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: rgb(222, 201, 187);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #514376;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-btn:hover {
+            background-color: #3e3562;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (name && email && contact && address) {
+                alert('Login successful!');
+                window.location.href = 'L&F.html'; // Redirect to L&F.html
+            } else {
+                errorMessage.textContent = 'Please fill out all fields.';
+            }
+        });
+    </script>
+</body>
+</html>
